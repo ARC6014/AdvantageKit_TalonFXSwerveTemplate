@@ -34,7 +34,7 @@
   "java.import.gradle.annotationProcessing.enabled": false,
   "editor.defaultFormatter": "richardwillis.vscode-spotless-gradle",
   "[json]": {
-    "editor.defaultFormatter": "richardwillis.vscode-spotless-gradle"
+    "editor.defaultFormatter": "vscode.json-language-features"
   },
   "[java]": {
     "editor.defaultFormatter": "richardwillis.vscode-spotless-gradle"
