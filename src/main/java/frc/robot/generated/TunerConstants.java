@@ -23,6 +23,7 @@ public class TunerConstants {
 
   // The steer motor uses any SwerveModule.SteerRequestType control request with the
   // output type specified by SwerveModuleConstants.SteerMotorClosedLoopOutput
+  // TODO: Tune
   private static final Slot0Configs steerGains =
       new Slot0Configs()
           .withKP(100)
@@ -74,6 +75,7 @@ public class TunerConstants {
 
   // Theoretical free speed (m/s) at 12 V applied output;
   // This needs to be tuned to your individual robot
+  // TODO: Tune
   public static final LinearVelocity kSpeedAt12Volts = MetersPerSecond.of(5.01);
 
   // Every 1 rotation of the azimuth results in kCoupleRatio drive motor turns;
@@ -90,8 +92,8 @@ public class TunerConstants {
   private static final int kPigeonId = 60;
 
   // These are only used for simulation
-  private static final MomentOfInertia kSteerInertia = KilogramSquareMeters.of(0.01);
-  private static final MomentOfInertia kDriveInertia = KilogramSquareMeters.of(0.01);
+  private static final MomentOfInertia kSteerInertia = KilogramSquareMeters.of(0.004);
+  private static final MomentOfInertia kDriveInertia = KilogramSquareMeters.of(0.025);
   // Simulated voltage necessary to overcome friction
   private static final Voltage kSteerFrictionVoltage = Volts.of(0.2);
   private static final Voltage kDriveFrictionVoltage = Volts.of(0.2);
@@ -211,15 +213,4 @@ public class TunerConstants {
           kInvertRightSide,
           kBackRightSteerMotorInverted,
           kBackRightCANcoderInverted);
-
-  /**
-   * Creates a CommandSwerveDrivetrain instance. This should only be called once in your robot
-   * program,.
-   */
-  /*
-  public static CommandSwerveDrivetrain createDrivetrain() {
-      return new CommandSwerveDrivetrain(
-          DrivetrainConstants, FrontLeft, FrontRight, BackLeft, BackRight
-      );
-  } */
 }
